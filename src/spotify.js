@@ -11,10 +11,12 @@ const scopes = [
   "user-modify-playback-state",
 ];
 
-export const getTokenFromResponse = () => {
+//pull token after logging in
+export const getTokenFromUrl = () => {
   return window.location.hash
     .substring(1)
     .split("&")
+    //reduces powerful, learn how to use!!
     .reduce((initial, item) => {
       var parts = item.split("=");
       initial[parts[0]] = decodeURIComponent(parts[1]);
