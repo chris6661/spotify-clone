@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DataLayer } from "./DataLayer"; 
+import reducer, { initialState } from "./reducer"; 
 
 ReactDOM.render(
   <React.StrictMode>
-    <DataLayer initialState reducer>
+    <DataLayer initialState={initialState} reducer={reducer}>
       <App />
     </DataLayer>
   </React.StrictMode>,
@@ -18,3 +19,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+ 
